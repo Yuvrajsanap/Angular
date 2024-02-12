@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="Bug">
+    <h1>Bug Report</h1>
+    <p>Please be as detailed as possible to aid us in the troubleshooting process.</p>
+  </div>
+
+  <form>
+    <div class="formgroup">
+    <label>Your name*</label><br>
+    <input type="text" id="fname">
+    <input type="text" id="lname"><br>
+    <label class="first">First Name</label>
+    <label class="last">Last Name</label>
+  </div><br>
+
+  <div class="formgroup">
+    <label>Email*</label><br>
+    <input type="email" id="add">
+  </div><br>
+
+  <div class="formgroup">
+    <label>Date and time you first noticed this bug*</label><br>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div><br>
+
+
+  <div class="formgroup">
+    <label>Impact</label><br>
+    <div class="btn-group" dropdown>
+      <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-animated">
+        Low <span class="caret"></span>
+      </button>
+      <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-animated">
+        <li role="menuitem"><a class="dropdown-item" href="#">Low</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Medium</a>
+        </li>
+        <li role="menuitem"><a class="dropdown-item" href="#">High</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="formgroup">
+    <label>Detailed explanation of bug*</label><br>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder=""></textarea>
+      </mat-form-field>
+  </div>
+
+  </form>
+</div>
+
+<router-outlet></router-outlet>
