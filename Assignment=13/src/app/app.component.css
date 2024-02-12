@@ -1,0 +1,53 @@
+img{
+    width: 26%;
+    margin: 0 43% 1px 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact{
+    display: flex;
+    flex-direction: left;
+}
+
+.Contact h1{
+    margin: auto;
+    justify-content: center;
+}
+
+.centre{
+    text-align: center;
+    font-size: 20px;
+}
+
+#fname{
+    width:  45%;
+    padding: 7px;
+    margin-right: 20px;
+}
+
+#lname{
+    width: 44%;
+    padding: 7px;
+}
+.last{
+    margin-left: 41%;
+}
+
+#mail{
+    width: 90%;
+    padding: 7px;
+}
+
+#phone{
+    width: 90%;
+    padding: 7px;
+}
+
+#add{
+    width: 90%;
+    padding: 7px;
+}
