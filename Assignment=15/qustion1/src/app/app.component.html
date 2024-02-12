@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="Contact">
+    <h1 [style.color]="'violet'">Contact Our Customer Support Center</h1>
+    <br>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.zR6VDM5iZm6rga53sGvN7gHaE7&pid=Api&P=0&h=180">
+  </div><br>
+   
+  <div class="Middle">
+    <h1>Contact Information</h1>
+    <p>Please fill your contact information below.</p>
+  </div><br>
+
+  <form [formGroup]="MarvellousForm">
+    <div class="form-group">
+      <input [class.is-invalid] = "MarvellousForm.get('FirstName')?.invalid" type="text" class="form-control" formControlName="FirstName" id="fname">
+      <label class="first">First Name</label>
+    </div><br>
+
+    <div class="form-group">
+      <input type="text" id="lname"><br>
+      <label class="first">Last Name</label>
+    </div><br>
+
+    <div class="formgroup">
+      <label>Email*</label><br>
+      <input [class.is-invalid] = "MarvellousForm.get('Email')?.invalid" type="email" class="form-control" formControlName="Email" id="add1">
+    </div><br>
+
+    <div class="formgroup">
+      <label>Phone*</label><br>
+      <input [class.is-invalid] = "MarvellousForm.get('Phone')?.invalid" type="tel" class="form-control" formControlName="Phone" id="add2">
+    </div><br>
+
+    <div class="formgroup">
+      <label>Address*</label><br>
+      <input type="text" id="add3">
+    </div><br>
+
+    <button type="submit" [disabled]="MarvellousForm.invalid">Submit</button>
+
+  </form>
+
+</div>
+
+<router-outlet></router-outlet>
